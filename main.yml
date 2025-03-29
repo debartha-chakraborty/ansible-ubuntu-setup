@@ -4,10 +4,10 @@
 
   roles:
     - role: setup
-      when: skip_setup is not defined and (skip_setup != 'yes' or skip_setup != 'true')
+      when: skip_setup is not defined or (skip_setup != 'yes' or skip_setup != 'true')
 
     - role: apps
-      when: skip_apps is not defined and (skip_apps != 'yes' or skip_apps != 'true')
+      when: skip_apps is not defined or (skip_apps != 'yes' or skip_apps != 'true')
 
     - role: services
-      when: skip_services is not defined and (skip_services != 'yes' or skip_services != 'true')
+      when: skip_services is not defined or (skip_services != 'yes' or skip_services != 'true')
