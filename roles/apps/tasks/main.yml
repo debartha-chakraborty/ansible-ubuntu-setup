@@ -10,7 +10,7 @@
 
 - include_tasks: "{{ item }}"
   with_fileglob:
-    - text_editor/*.yml
+    - editor/*.yml
   when: skip_text_editor is not defined and (skip_text_editor != 'yes' or skip_text_editor != 'true')
 
 - include_tasks: "{{ item }}"
