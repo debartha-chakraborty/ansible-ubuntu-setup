@@ -1,5 +1,5 @@
 - include_tasks: 00-upgrade.yml
-  when: skip_upgrade is not defined and (skip_upgrade != 'yes' or skip_upgrade != 'true')
+  when: skip_upgrade is not defined or (skip_upgrade != 'yes' or skip_upgrade != 'true')
   
 - include_tasks: 01-config.yml
-  when: skip_config is not defined and (skip_config != 'yes' or skip_config != 'true')
+  when: skip_config is not defined or (skip_config != 'yes' or skip_config != 'true')

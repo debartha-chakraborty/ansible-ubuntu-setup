@@ -1,19 +1,19 @@
 - include_tasks: "{{ item }}"
   with_fileglob:
     - browser/*.yml
-  when: skip_browser is not defined and (skip_browser != 'yes' or skip_browser != 'true')
+  when: skip_browser is not defined or (skip_browser != 'yes' or skip_browser != 'true')
 
 - include_tasks: "{{ item }}"
   with_fileglob:
     - communication/*.yml
-  when: skip_chat is not defined and (skip_chat != 'yes' or skip_chat != 'true')
+  when: skip_chat is not defined or (skip_chat != 'yes' or skip_chat != 'true')
 
 - include_tasks: "{{ item }}"
   with_fileglob:
     - editor/*.yml
-  when: skip_text_editor is not defined and (skip_text_editor != 'yes' or skip_text_editor != 'true')
+  when: skip_text_editor is not defined or (skip_text_editor != 'yes' or skip_text_editor != 'true')
 
 - include_tasks: "{{ item }}"
   with_fileglob:
     - tools/*.yml
-  when: skip_tools is not defined and (skip_tools != 'yes' or skip_tools != 'true')
+  when: skip_tools is not defined or (skip_tools != 'yes' or skip_tools != 'true')
