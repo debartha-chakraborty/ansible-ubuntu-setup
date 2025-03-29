@@ -1,3 +1,4 @@
 - name: install GitKraken
   snap:
     name: gitkraken
+    classic: yes
