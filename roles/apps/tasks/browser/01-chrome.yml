@@ -1,0 +1,21 @@
+# ############################
+# Ubuntu
+# ############################
+- name: add Google's pub key
+  apt_key:
+    url: "https://dl.google.com/linux/linux_signing_key.pub"
+    state: present
+  when: ansible_distribution == 'Ubuntu'
+
+- name: add Chrome's repository
+  apt_repository:
+    repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+    state: present
+  when: ansible_distribution == 'Ubuntu'
+
+- name: install Chrome
+  apt:
+    name: google-chrome-stable
+    update_cache: yes
+    force: yes
+  when: ansible_distribution == 'Ubuntu'

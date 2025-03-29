@@ -1,0 +1,7 @@
+# ############################
+# General
+# ############################
+- name: install VSCode Insiders
+  snap:
+    name: code-insiders
+    classic: yes

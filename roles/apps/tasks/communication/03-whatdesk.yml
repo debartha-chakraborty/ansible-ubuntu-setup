@@ -1,0 +1,3 @@
+- name: install Whatsdesk
+  snap:
+    name: whatsdesk

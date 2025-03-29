@@ -1,0 +1,9 @@
+# ############################
+# Ubuntu
+# ############################
+- name: install Tilix
+  apt:
+    name: tilix
+    update_cache: yes
+    force: yes
+  when: ansible_distribution == 'Ubuntu'

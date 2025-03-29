@@ -1,0 +1,8 @@
+# ############################
+# Ubuntu
+# ############################
+- name: install Gnome Tweak Tools
+  apt:
+    name: gnome-tweak-tool
+    update_cache: yes
+  when: ansible_distribution == 'Ubuntu'

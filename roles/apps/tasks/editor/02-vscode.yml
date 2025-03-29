@@ -1,0 +1,7 @@
+# ############################
+# General
+# ############################
+- name: install VSCode
+  snap:
+    name: code
+    classic: yes

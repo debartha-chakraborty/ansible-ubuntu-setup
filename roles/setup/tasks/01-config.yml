@@ -1,0 +1,24 @@
+# ############################
+# Ubuntu
+# ############################
+- name: Install snapd
+  apt:
+    name: snapd
+    update_cache: yes
+  when: ansible_distribution == 'Ubuntu'
+
+# ############################
+# Fedora
+# ############################
+- name: Install snapd
+  dnf:
+    name: snapd
+    state: latest
+  when: ansible_distribution == 'Fedora'
+  
+- name: Creating symlink
+  file:
+    src: /var/lib/snapd/snap
+    dest: /snap
+    state: link
+  when: ansible_distribution == 'Fedora'

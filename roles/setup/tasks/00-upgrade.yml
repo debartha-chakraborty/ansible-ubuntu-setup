@@ -1,0 +1,16 @@
+# ############################
+# Ubuntu
+# ############################
+- name: Update all packages to the latest version
+  apt:
+    upgrade: dist
+    update_cache: yes
+  when: ansible_distribution == 'Ubuntu'
+
+# ############################
+# Fedora
+# ############################  
+- name: update all packages to the lastest version
+  raw: /usr/bin/dnf -y upgrade
+  when: ansible_distribution == 'Fedora'
+    

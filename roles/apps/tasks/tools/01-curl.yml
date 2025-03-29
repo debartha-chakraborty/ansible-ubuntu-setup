@@ -1,0 +1,8 @@
+# ############################
+# Ubuntu
+# ############################
+- name: install cURL
+  apt:
+    name: curl
+    update_cache: yes
+  when: ansible_distribution == 'Ubuntu'
